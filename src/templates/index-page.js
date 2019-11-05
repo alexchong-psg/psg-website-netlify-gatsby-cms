@@ -2,15 +2,85 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Container from 'react-bulma-components/lib/components/container';
+import Columns from 'react-bulma-components/lib/components/columns';
 import Helmet from 'react-helmet';
 
+import {
+  FaTwitter,
+  FaFacebook,
+  FaLinkedin,
+  FaRegBell,
+  FaEnvelope,
+  FaPhone,
+  FaMobile,
+  FaChartLine,
+  FaEye
+} from 'react-icons/fa';
+
 import Layout from '../components/Layout';
+import HomeCarousel from '../components/HomeCarousel';
+import ServiceTile from '../components/ServiceTile';
 import Content, { HTMLContent } from '../components/Content';
 
-export const IndexPageTemplate = ({ title, content, contentComponent }) => {
+import './index-page.scss';
+
+export const IndexPageTemplate = ({
+  title,
+  slideshow,
+  services,
+  content,
+  contentComponent
+}) => {
   const PageContent = contentComponent || Content;
 
-  return <PageContent className="content" content={content} />;
+  return (
+    <div>
+      <HomeCarousel slideshow={slideshow} />
+
+      <PageContent className="header-content" content={content} />
+
+      <Columns
+        style={{
+          backgroundColor: 'rgb(152, 167, 189)',
+
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
+        <h1
+          style={{
+            margin: '30px',
+            fontSize: '36px',
+            fontWeight: '400'
+          }}
+        >
+          Our Services
+        </h1>
+      </Columns>
+
+      <Columns
+        style={{
+          backgroundColor: 'rgb(152, 167, 189)',
+          display: 'flex',
+          marginBottom: '-2.9vh',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
+        {services.map(({ title, blurb }, idx) => (
+          <Columns.Column
+            size={4}
+            style={{
+              backgroundColor: 'rgb(152, 167, 189)'
+            }}
+          >
+            <ServiceTile idx={idx} title={title} blurb={blurb} />
+          </Columns.Column>
+        ))}
+      </Columns>
+    </div>
+  );
 };
 
 IndexPageTemplate.propTypes = {
@@ -25,18 +95,20 @@ const IndexPage = ({ data }) => {
     site: { siteMetadata }
   } = data;
 
+  console.log('TCL: IndexPage -> post', post);
+
   return (
     <Layout>
       <Helmet>
         <title>{`${post.frontmatter.title} | ${siteMetadata.title}`}</title>
       </Helmet>
-      <Container>
-        <IndexPageTemplate
-          contentComponent={HTMLContent}
-          title={post.frontmatter.title}
-          content={post.html}
-        />
-      </Container>
+      <IndexPageTemplate
+        contentComponent={HTMLContent}
+        title={post.frontmatter.title}
+        slideshow={post.frontmatter.slideshow}
+        services={post.frontmatter.services}
+        content={post.html}
+      />
     </Layout>
   );
 };
@@ -62,6 +134,21 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        slideshow {
+          blurb
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 80) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          title
+        }
+        services {
+          blurb
+          title
+        }
       }
     }
   }

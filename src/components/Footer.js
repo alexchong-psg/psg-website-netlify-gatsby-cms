@@ -105,7 +105,7 @@ const FooterComponent = () => {
                 />
               </form>
             </Columns.Column>
-            <Columns.Column className="footerContainer">
+            <Columns.Column>
               <h3>PSG Solutions, LLC</h3>
               <hr
                 style={{
