@@ -1,19 +1,32 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import './all.sass'
-import useSiteMetadata from './SiteMetadata'
-import { withPrefix } from 'gatsby'
+import React from 'react';
+import { Helmet } from 'react-helmet';
+
+import Container from 'react-bulma-components/lib/components/container';
+import Content from 'react-bulma-components/lib/components/content';
+
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
+import './style.scss';
+import useSiteMetadata from './SiteMetadata';
+import { withPrefix } from 'gatsby';
 
 const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata()
+  const { title, description, keywords, author, imageUrl } = useSiteMetadata();
   return (
     <div>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
-        <meta name="description" content={description} />
+
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+        />
+        <meta name="keywords" content={keywords} />
+        {/* Google / Search Engine Meta Tags */}
+        <meta itemProp="name" content={author} />
+        <meta itemProp="description" content={description} />
+        <meta itemProp="image" content={imageUrl} />
 
         <link
           rel="apple-touch-icon"
@@ -49,10 +62,10 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <div>{children}</div>
+      {children}
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default TemplateWrapper
+export default TemplateWrapper;

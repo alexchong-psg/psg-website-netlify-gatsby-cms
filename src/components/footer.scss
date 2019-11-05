@@ -1,0 +1,37 @@
+.footerContainer {
+  background-color: #243841;
+  color: white;
+}
+
+.footerContainer h3 {
+  font-size: 24px;
+  color: white;
+  text-align: center;
+}
+
+.footerContainer .footerLinksContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.footerContainer .footerLinks {
+  text-align: center;
+  text-decoration: none;
+  color: rgb(175, 197, 218);
+
+  border: 0;
+}
+.footerContainer p {
+  text-align: center;
+  text-decoration: none;
+  margin: 20px;
+  border: 0;
+}
+
+.footerContainer a {
+  text-align: center;
+  text-decoration: none;
+  color: rgb(175, 197, 218);
+
+  border: 0;
+}
