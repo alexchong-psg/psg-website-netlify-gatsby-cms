@@ -44,4 +44,8 @@ services:
     image: /img/eye.svg
     title: Consulting
 ---
-this is the body!!
+# “Job #1 is helping our customers grow their businesses”
+
+## \- Peter Graham, Managing Partner and Co-founder
+
+We are a seasoned and flexible team of consultants, contractors, and developers working with you to deliver great products, services and programs
