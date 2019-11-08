@@ -1,6 +1,8 @@
+@import '../_variables.sass';
+
 .header-content {
   margin: 100px 100px 100px 250px;
-  color: rgb(6, 68, 120);
+  color: $navy;
   h1 {
     font-size: 30px;
     font-weight: 500;
@@ -14,5 +16,23 @@
   p {
     font-size: 21px;
     font-weight: 400;
+  }
+}
+
+.index-container {
+  .our-services-container {
+    background-color: $grey-lightest;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .services-container {
+    background-color: $grey-lightest;
+    display: flex;
+    margin-bottom: -2.9vh;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 50px;
   }
 }

@@ -20,7 +20,7 @@ import Columns from 'react-bulma-components/lib/components/columns';
 
 import Layout from '../components/LayoutWrapper';
 import backgroundimage from '../img/contactus.jpg';
-import './contact.scss';
+import './contact-us.scss';
 
 const Contact = ({ data }) => {
   const {

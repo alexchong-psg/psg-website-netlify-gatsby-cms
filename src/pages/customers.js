@@ -37,7 +37,7 @@ const AboutPage = ({ data }) => {
             A few of Our Clients...
           </h1>
           <a href="http://www.contravent.com/" target="_blank">
-            <h3>
+            <h3 className="customer-title-container">
               <img style={{ height: '50px' }} src={contravent} />
               Contravent
             </h3>
@@ -48,7 +48,7 @@ const AboutPage = ({ data }) => {
           </p>
 
           <a href="https://www.gsma.com/" target="_blank">
-            <h3>
+            <h3 className="customer-title-container">
               <img style={{ height: '50px' }} src={gsma} /> GSMA
             </h3>
           </a>
@@ -61,7 +61,7 @@ const AboutPage = ({ data }) => {
           </p>
 
           <a href="https://www.inglisjane.co.uk/" target="_blank">
-            <h3>
+            <h3 className="customer-title-container">
               <img style={{ height: '40px' }} src={inglisjane} />
               InglisJane
             </h3>

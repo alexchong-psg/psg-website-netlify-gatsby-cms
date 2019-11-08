@@ -34,20 +34,12 @@ export const IndexPageTemplate = ({
   const PageContent = contentComponent || Content;
 
   return (
-    <div>
+    <div className="index-container">
       <HomeCarousel slideshow={slideshow} />
 
       <PageContent className="header-content" content={content} />
 
-      <Columns
-        style={{
-          backgroundColor: 'rgb(152, 167, 189)',
-
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center'
-        }}
-      >
+      <Columns className="our-services-container" style={{}}>
         <h1
           style={{
             margin: '30px',
@@ -59,22 +51,9 @@ export const IndexPageTemplate = ({
         </h1>
       </Columns>
 
-      <Columns
-        style={{
-          backgroundColor: 'rgb(152, 167, 189)',
-          display: 'flex',
-          marginBottom: '-2.9vh',
-          justifyContent: 'center',
-          alignItems: 'center'
-        }}
-      >
+      <Columns className="services-container">
         {services.map(({ title, blurb }, idx) => (
-          <Columns.Column
-            size={4}
-            style={{
-              backgroundColor: 'rgb(152, 167, 189)'
-            }}
-          >
+          <Columns.Column size={4}>
             <ServiceTile idx={idx} title={title} blurb={blurb} />
           </Columns.Column>
         ))}

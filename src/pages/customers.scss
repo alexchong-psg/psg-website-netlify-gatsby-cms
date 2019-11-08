@@ -16,6 +16,14 @@
   width: 75%;
 }
 
+.customer-title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 0 10px 0;
+  padding: 0;
+}
+
 // @media screen and (max-width: 768px) {
 //   .headerContainer {
 //     height: 300px;

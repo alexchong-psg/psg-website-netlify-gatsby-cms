@@ -39,7 +39,7 @@ class NavbarComponent extends Component {
             <Navbar.Item renderAs={Link} to="/about">
               About
             </Navbar.Item>
-            <Navbar.Item renderAs={Link} to="/contact">
+            <Navbar.Item renderAs={Link} to="/contact-us">
               Contact
             </Navbar.Item>
           </Navbar.Container>

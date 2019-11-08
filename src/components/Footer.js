@@ -147,7 +147,7 @@ const FooterComponent = () => {
               About
             </Link>
             |
-            <Link toTop to="/contact" className="footerLinks">
+            <Link toTop to="/contact-us" className="footerLinks">
               Contact
             </Link>
           </Columns>
