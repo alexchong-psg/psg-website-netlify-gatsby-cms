@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { graphql } from 'gatsby';
 import { FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
 import {
   Field,
@@ -16,7 +16,6 @@ import {
 import Container from 'react-bulma-components/lib/components/container';
 import { Formik } from 'formik';
 import Button from 'react-bulma-components/lib/components/button';
-import Icon from 'react-bulma-components/lib/components/icon';
 import Columns from 'react-bulma-components/lib/components/columns';
 
 import Layout from '../components/layout';
