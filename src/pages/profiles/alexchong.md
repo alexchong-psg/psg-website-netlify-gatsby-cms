@@ -2,7 +2,7 @@
 templateKey: profile
 name: Alex Chong
 title: Partner, Product Development
-profile: ./alex.jpg
+profile: /img/alex.jpg
 teaser: Alex joined PSG as Partner, Product Development in 2017.   Prior to PSG, Alex spent more than 2 ecades as a consulting engineer in the IT / Development / Training and Security space for companies such as Pfizer, SAIC and Verizon.
 weight: 3
 ---

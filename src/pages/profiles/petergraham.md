@@ -2,7 +2,7 @@
 templateKey: profile
 name: Peter Graham
 title: Co-founder and Managing Partner
-profile: ./peter2.png
+profile: /img/peter2.png
 teaser: With more than 2 decades of experience in program and project management, business analysis, business development, and thought leadership for global software initiatives Peter Graham, in January of 2015, Co-founded PSG Solutions; a full-service software delivery and development consultancy.
 weight: 1
 ---

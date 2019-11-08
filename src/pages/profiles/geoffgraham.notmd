@@ -2,7 +2,7 @@
 templateKey: profile
 name: Geoff Graham
 title: Partner, Service Delivery
-profile: ./geoff.jpg
+profile: /img/geoff.jpg
 teaser: Geoff joined PSG Solutions as Partner, Service Delivery in 2017. Geoff is responsible for designing and providing a consistent experience for the firm’s customers across all market segments. Prior to joining PSG Solutions, Geoff was a member of the president’s staff at BAE Systems Intelligence & Security where he focused on corporate strategy and business development.
 weight: 0
 ---

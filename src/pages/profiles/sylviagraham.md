@@ -2,7 +2,7 @@
 templateKey: profile
 name: Sylvia Graham
 title: Co-founder and Managing Partner
-profile: ./sylvia.jpg
+profile: /img/sylvia.jpg
 teaser: With over 25 years' experience in business operations, Sylvia co-founded PSG Solutions in January of 2015 and is responsible for the company’s administration and operational practices. Sylvia has a long history of account management, operations, and sales in the software development industry supporting and growing relationships for some of the largest financial institutions in the world.
 weight: 2
 ---
