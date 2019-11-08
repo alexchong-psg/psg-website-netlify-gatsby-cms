@@ -18,7 +18,7 @@ import { Formik } from 'formik';
 import Button from 'react-bulma-components/lib/components/button';
 import Columns from 'react-bulma-components/lib/components/columns';
 
-import Layout from '../components/layout';
+import Layout from '../components/LayoutWrapper';
 import backgroundimage from '../img/contactus.jpg';
 import './contact.scss';
 

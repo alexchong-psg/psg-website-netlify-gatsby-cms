@@ -5,7 +5,7 @@ import Tile from 'react-bulma-components/lib/components/tile';
 import Image from 'react-bulma-components/lib/components/image';
 import Img from 'gatsby-image';
 import MiniProfile from '../components/miniprofile';
-import Layout from '../components/layout';
+import Layout from '../components/LayoutWrapper';
 import './about.scss';
 import backgroundimage from '../img/aboutus.jpg';
 import oix from '../img/oix.png';
@@ -46,7 +46,6 @@ const backgroundImageStyle = {
   backgroundSize: 'cover'
 };
 const AboutPage = ({ data }) => {
-  console.log('TCL: AboutPage -> data', data);
   return (
     <Layout
       style={{

@@ -17,7 +17,7 @@ import {
   FaEye
 } from 'react-icons/fa';
 
-import Layout from '../components/Layout';
+import Layout from '../components/LayoutWrapper';
 import HomeCarousel from '../components/HomeCarousel';
 import ServiceTile from '../components/ServiceTile';
 import Content, { HTMLContent } from '../components/Content';
@@ -94,8 +94,6 @@ const IndexPage = ({ data }) => {
     markdownRemark: post,
     site: { siteMetadata }
   } = data;
-
-  console.log('TCL: IndexPage -> post', post);
 
   return (
     <Layout>

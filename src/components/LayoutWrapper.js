@@ -4,8 +4,8 @@ import { Helmet } from 'react-helmet';
 import Container from 'react-bulma-components/lib/components/container';
 import Content from 'react-bulma-components/lib/components/content';
 
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
+import Footer from './Footer';
+import Navbar from './Navbar';
 import './style.scss';
 import useSiteMetadata from './SiteMetadata';
 import { withPrefix } from 'gatsby';

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Layout from '../components/layout';
+import Layout from '../components/LayoutWrapper';
 import brandsserved from '../img/customers.png';
 import backgroundimage from '../img/customer.jpg';
 import contravent from '../img/Contravent.jpg';
