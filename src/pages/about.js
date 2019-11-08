@@ -31,7 +31,7 @@ export const query = graphql`
           frontmatter {
             title
             name
-            profile {
+            image {
               childImageSharp {
                 fluid(maxWidth: 640, fit: COVER) {
                   ...GatsbyImageSharpFluid
