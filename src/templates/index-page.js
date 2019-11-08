@@ -1,21 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, graphql } from 'gatsby';
-import Container from 'react-bulma-components/lib/components/container';
+import { graphql } from 'gatsby';
 import Columns from 'react-bulma-components/lib/components/columns';
 import Helmet from 'react-helmet';
-
-import {
-  FaTwitter,
-  FaFacebook,
-  FaLinkedin,
-  FaRegBell,
-  FaEnvelope,
-  FaPhone,
-  FaMobile,
-  FaChartLine,
-  FaEye
-} from 'react-icons/fa';
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
 import Layout from '../components/LayoutWrapper';
 import HomeCarousel from '../components/HomeCarousel';
@@ -25,7 +14,6 @@ import Content, { HTMLContent } from '../components/Content';
 import './index-page.scss';
 
 export const IndexPageTemplate = ({
-  title,
   slideshow,
   services,
   content,
@@ -37,8 +25,9 @@ export const IndexPageTemplate = ({
     <div className="index-container">
       <HomeCarousel slideshow={slideshow} />
 
-      <PageContent className="header-content" content={content} />
-
+      <Fade>
+        <PageContent className="header-content" content={content} />
+      </Fade>
       <Columns className="our-services-container" style={{}}>
         <h1
           style={{
@@ -54,7 +43,9 @@ export const IndexPageTemplate = ({
       <Columns className="services-container">
         {services.map(({ title, blurb }, idx) => (
           <Columns.Column size={4}>
-            <ServiceTile idx={idx} title={title} blurb={blurb} />
+            <Zoom key={`services-${title}`}>
+              <ServiceTile idx={idx} title={title} blurb={blurb} />
+            </Zoom>
           </Columns.Column>
         ))}
       </Columns>
