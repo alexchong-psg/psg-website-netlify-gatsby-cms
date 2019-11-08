@@ -77,6 +77,13 @@ const Contact = ({ data }) => {
           <Columns.Column size={5} offset={2}>
             <h1 style={{ 'font-weight': 'bold' }}>Send us a message</h1>
             <br />
+            {/* honeypot form */}
+            <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+              <input type="text" name="name" />
+              <input type="email" name="email" />
+              <input name="phone" />
+              <textarea name="message"></textarea>
+            </form>
             <Formik
               initialValues={{ email: '', password: '' }}
               validate={values => {
@@ -132,7 +139,6 @@ const Contact = ({ data }) => {
                     <Control>
                       <Input
                         placeholder="name"
-                        type="name"
                         name="name"
                         onChange={handleChange}
                         onBlur={handleBlur}
@@ -166,7 +172,6 @@ const Contact = ({ data }) => {
                     <Control>
                       <Input
                         placeholder="phone"
-                        type="phone"
                         name="phone"
                         onChange={handleChange}
                         onBlur={handleBlur}
@@ -183,7 +188,6 @@ const Contact = ({ data }) => {
                     <Control>
                       <Textarea
                         placeholder="message"
-                        type="message"
                         name="message"
                         onChange={handleChange}
                         onBlur={handleBlur}
