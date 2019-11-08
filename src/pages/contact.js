@@ -25,7 +25,7 @@ import './contact.scss';
 const Contact = ({ data }) => {
   const {
     site: {
-      siteMetadata: { linkedin }
+      siteMetadata: { linkedin, email, phone }
     }
   } = data;
 
@@ -54,15 +54,13 @@ const Contact = ({ data }) => {
               <address>
                 <FaEnvelope className="contactus-icon" />
 
-                <a href="mailto:info@psg-solutions.com">
-                  info@psg-solutions.com
-                </a>
+                <a href={`mailto:${email}`}>{email}</a>
               </address>
             </p>
             <p className="contactus-container">
               <FaPhone className="contactus-icon" />
               <span>
-                <a href="tel:+1-520-829-9792">+1 (520) 829-9792</a>
+                <a href={`tel:${phone}`}>{phone}</a>
               </span>
             </p>
             <p className="contactus-container">
@@ -220,6 +218,8 @@ export const pageQuery = graphql`
   query ContactUs {
     site {
       siteMetadata {
+        email
+        phone
         linkedin
       }
     }

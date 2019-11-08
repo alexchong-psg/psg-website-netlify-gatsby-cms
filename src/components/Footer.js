@@ -125,7 +125,7 @@ const FooterComponent = () => {
                 <address>
                   {' '}
                   <FaEnvelope />
-                  <a href="mailto:info@psg-solutions.com"> {email}</a>
+                  <a href={`mailto:${email}`}> {email}</a>
                 </address>
               </p>
               <p>
