@@ -5,6 +5,8 @@ module.exports = {
     imageUrl: 'https://i.imgur.com/Vz81GEl.png',
     description: 'A Project to bootstrap your next Gatsby + Bulma site.',
     keywords: `Web developer, Web, Developer, CSS, HTML, JS, Javascript, Gatsby, Bulma Developer, CSS3, HTML5, Seo, Starter`,
+    email: 'info@psg-solutions.com',
+    phone: '+1 (520) 829-9792',
     twitter: 'https://twitter.com/PSG_Solutions',
     linkedin: 'https://www.linkedin.com/company/4847749/',
     facebook: 'https://www.facebook.com/PSG-Solutions-395695613940022/',
@@ -109,13 +111,13 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`
       }
     },
-    {
-      resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
-      options: {
-        develop: true, // Activates purging in npm run develop
-        purgeOnly: ['/all.sass'] // applies purging only on the bulma css file
-      }
-    }, // must be after other CSS plugins
+    // {
+    //   resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
+    //   options: {
+    //     develop: true, // Activates purging in npm run develop
+    //     purgeOnly: ['/all.sass'] // applies purging only on the bulma css file
+    //   }
+    // }, // must be after other CSS plugins
     'gatsby-plugin-netlify' // make sure to keep it last in the array
   ]
 };

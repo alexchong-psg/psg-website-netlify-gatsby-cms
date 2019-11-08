@@ -104,11 +104,11 @@ const Contact = ({ data }) => {
                 return errors;
               }}
               onSubmit={(values, { setSubmitting }) => {
-                document.theForm.submit();
-                setTimeout(() => {
-                  alert(JSON.stringify(values, null, 2));
-                  setSubmitting(false);
-                }, 400);
+                document.contact.submit();
+                // setTimeout(() => {
+                //   alert(JSON.stringify(values, null, 2));
+                //   setSubmitting(false);
+                // }, 400);
               }}
             >
               {({
@@ -126,7 +126,7 @@ const Contact = ({ data }) => {
                   //   this.formref = ref;
                   // }}
                   // style={{ width: '310px', margin: '0 auto', float: 'left' }}
-                  name="theForm"
+                  name="contact"
                   // action="https://foDDDrmspree.io/info@psg-solutions.com"
                   onSubmit={handleSubmit}
                   data-netlify="true"

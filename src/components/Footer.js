@@ -19,7 +19,18 @@ import useSiteMetadata from './SiteMetadata';
 import './footer.scss';
 
 const FooterComponent = () => {
-  const { title, description, keywords, author, imageUrl } = useSiteMetadata();
+  const {
+    title,
+    description,
+    keywords,
+    author,
+    imageUrl,
+    email,
+    phone,
+    twitter,
+    linkedin,
+    facebook
+  } = useSiteMetadata();
   return (
     <Footer className="footerContainer">
       <Container>
@@ -37,7 +48,7 @@ const FooterComponent = () => {
               <p style={{ textAlign: 'center' }}>
                 <a
                   target="_blank"
-                  href="https://twitter.com/PSG_Solutions"
+                  href={twitter}
                   style={{ color: 'rgb(40, 55, 64)' }}
                 >
                   <FaTwitter
@@ -47,7 +58,7 @@ const FooterComponent = () => {
 
                 <a
                   target="_blank"
-                  href="https://www.facebook.com/PSG-Solutions-395695613940022/"
+                  href={facebook}
                   style={{ color: 'rgb(40, 55, 64)' }}
                 >
                   <FaFacebook
@@ -55,10 +66,7 @@ const FooterComponent = () => {
                   />{' '}
                 </a>
 
-                <a
-                  href="https://www.linkedin.com/company/4847749/"
-                  style={{ color: 'rgb(40, 55, 64)' }}
-                >
+                <a href={linkedin} style={{ color: 'rgb(40, 55, 64)' }}>
                   <FaLinkedin
                     style={{ margin: 10, color: 'rgb(175, 197, 218)' }}
                   />
@@ -117,16 +125,13 @@ const FooterComponent = () => {
                 <address>
                   {' '}
                   <FaEnvelope />
-                  <a href="mailto:info@psg-solutions.com">
-                    {' '}
-                    info@psg-solutions.com
-                  </a>
+                  <a href="mailto:info@psg-solutions.com"> {email}</a>
                 </address>
               </p>
               <p>
                 <FaPhone />
                 <span>
-                  <a href="tel:+1-520-829-9792"> +1 (520) 829-9792</a>
+                  <a href={`tel:${phone}`}>{phone}</a>
                 </span>
               </p>
               {/* <hr />
@@ -168,7 +173,7 @@ const FooterComponent = () => {
               About
             </Link>
             |
-            <Link toTop to="/contact-us" className="footerLinks">
+            <Link toTop to="/contact" className="footerLinks">
               Contact
             </Link>
             <hr

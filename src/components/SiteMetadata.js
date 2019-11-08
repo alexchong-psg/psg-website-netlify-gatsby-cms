@@ -11,6 +11,11 @@ const useSiteMetadata = () => {
             imageUrl
             description
             keywords
+            email
+            phone
+            twitter
+            linkedin
+            facebook
           }
         }
       }
