@@ -81,6 +81,9 @@ const Contact = ({ data }) => {
               initialValues={{ email: '', password: '' }}
               validate={values => {
                 const errors = {};
+                if (!values.name) {
+                  errors.name = 'Required';
+                }
                 if (!values.email) {
                   errors.email = 'Required';
                 } else if (
@@ -88,9 +91,14 @@ const Contact = ({ data }) => {
                 ) {
                   errors.email = 'Invalid email address';
                 }
+
+                if (!values.message) {
+                  errors.message = 'Required';
+                }
                 return errors;
               }}
               onSubmit={(values, { setSubmitting }) => {
+                document.theForm.submit();
                 setTimeout(() => {
                   alert(JSON.stringify(values, null, 2));
                   setSubmitting(false);
@@ -108,8 +116,13 @@ const Contact = ({ data }) => {
                 /* and other goodies */
               }) => (
                 <form
+                  // ref={ref => {
+                  //   this.formref = ref;
+                  // }}
                   // style={{ width: '310px', margin: '0 auto', float: 'left' }}
+                  name="theForm"
                   // action="https://foDDDrmspree.io/info@psg-solutions.com"
+                  onSubmit={handleSubmit}
                   data-netlify="true"
                   method="POST"
                 >
@@ -124,8 +137,12 @@ const Contact = ({ data }) => {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.name}
+                        color={errors.name && touched.name && 'danger'}
                       />
                     </Control>
+                    {errors.name && touched.name && (
+                      <Help color="danger">{errors.name}</Help>
+                    )}
                   </Field>
                   <Field>
                     <Label>Email*:</Label>
@@ -137,8 +154,12 @@ const Contact = ({ data }) => {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.email}
+                        color={errors.email && touched.email && 'danger'}
                       />
                     </Control>
+                    {errors.email && touched.email && (
+                      <Help color="danger">{errors.email}</Help>
+                    )}
                   </Field>
                   <Field>
                     <Label>Phone:</Label>
@@ -150,8 +171,12 @@ const Contact = ({ data }) => {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.phone}
+                        color={errors.phone && touched.phone && 'danger'}
                       />
                     </Control>
+                    {errors.phone && touched.phone && (
+                      <Help color="danger">{errors.phone}</Help>
+                    )}
                   </Field>
                   <Field>
                     <Label>Message*:</Label>
@@ -163,8 +188,12 @@ const Contact = ({ data }) => {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.message}
+                        color={errors.message && touched.message && 'danger'}
                       />
                     </Control>
+                    {errors.message && touched.message && (
+                      <Help color="danger">{errors.message}</Help>
+                    )}
                   </Field>
 
                   <Field kind="group">
