@@ -18,6 +18,12 @@
     font-weight: 400;
   }
 }
+/* Phone Adjustments */
+@media screen and (max-width: 768px) {
+  .header-content {
+    margin: 40px 10px;
+  }
+}
 
 .index-container {
   .our-services-container {
