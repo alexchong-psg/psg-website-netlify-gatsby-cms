@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Bulma Quickstart',
+    title: 'PSG Solutions',
     author: 'Aman Mittal',
     imageUrl: 'https://i.imgur.com/Vz81GEl.png',
-    description: 'A Project to bootstrap your next Gatsby + Bulma site.',
-    keywords: `Web developer, Web, Developer, CSS, HTML, JS, Javascript, Gatsby, Bulma Developer, CSS3, HTML5, Seo, Starter`,
+    description: 'Service delivery by PSG Solutions.',
+    keywords: `Web developer, Web, Developer, CSS, HTML, JS, Javascript, Gatsby, Bulma Developer, CSS3, HTML5, Seo`,
     email: 'info@psg-solutions.com',
     phone: '+1 (520) 829-9792',
     twitter: 'https://twitter.com/PSG_Solutions',
@@ -14,7 +14,7 @@ module.exports = {
     medium: 'https://medium.com/@amanhimself',
     gatsby: 'https://www.gatsbyjs.org/',
     bulma: 'https://bulma.io/',
-    siteUrl: `https://www.example.com`,
+    siteUrl: `https://www.psg-solutions.com`,
     // export bitbucket pipelines info.
     bitbucketBuildNumber: process.env.BITBUCKET_BUILD_NUMBER || '',
     bitbucketHash: process.env.BITBUCKET_COMMIT || '',

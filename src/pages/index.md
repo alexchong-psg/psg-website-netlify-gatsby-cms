@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+title: Home
 slideshow:
   - blurb: >-
       We rapidly develop applications for Android, iOS, and Web, testing
