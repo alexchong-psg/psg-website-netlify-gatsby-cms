@@ -34,7 +34,7 @@ collections:
 
   - name: "profile"
     label: "Profile"
-    folder: "src/pages/profile"
+    folder: "src/pages/profiles"
     create: true
     slug: "{{slug}}"
     fields:

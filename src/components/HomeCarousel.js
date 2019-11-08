@@ -53,6 +53,8 @@ class HomeCarousel extends React.Component {
 
   render() {
     const { slideshow } = this.props;
+    if (!slideshow) return null;
+
     const settings = {
       dots: true,
       infinite: true,

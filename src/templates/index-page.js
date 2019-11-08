@@ -41,13 +41,14 @@ export const IndexPageTemplate = ({
       </Columns>
 
       <Columns className="services-container">
-        {services.map(({ title, blurb }, idx) => (
-          <Columns.Column size={4}>
-            <Zoom key={`services-${title}`}>
-              <ServiceTile idx={idx} title={title} blurb={blurb} />
-            </Zoom>
-          </Columns.Column>
-        ))}
+        {services &&
+          services.map(({ title, blurb }, idx) => (
+            <Columns.Column size={4}>
+              <Zoom key={`services-${title}`}>
+                <ServiceTile idx={idx} title={title} blurb={blurb} />
+              </Zoom>
+            </Columns.Column>
+          ))}
       </Columns>
     </div>
   );
