@@ -48,7 +48,7 @@ const Contact = ({ data }) => {
       </Columns>
       <Container>
         <Columns>
-          <Columns.Column size={3} offset={2}>
+          <Columns.Column size={5} offset={1}>
             <h1 style={{ 'font-weight': 'bold' }}>Our Information</h1>
             <p className="contactus-container">
               <address>
@@ -71,7 +71,7 @@ const Contact = ({ data }) => {
             </p>
           </Columns.Column>
 
-          <Columns.Column size={5} offset={2}>
+          <Columns.Column size={6}>
             <h1 style={{ 'font-weight': 'bold' }}>Send us a message</h1>
             <br />
             {/* honeypot form */}
@@ -205,6 +205,8 @@ const Contact = ({ data }) => {
                 </form>
               )}
             </Formik>
+            <br />
+            <br />
           </Columns.Column>
         </Columns>
       </Container>

@@ -39,21 +39,14 @@ const FooterComponent = () => {
             <Columns.Column>
               <h3>Follow us</h3>
 
-              <hr
-                style={{
-                  backgroundColor: 'rgb(175, 197, 218)',
-                  textAlign: 'center'
-                }}
-              />
+              <hr />
               <p style={{ textAlign: 'center' }}>
                 <a
                   target="_blank"
                   href={twitter}
                   style={{ color: 'rgb(40, 55, 64)' }}
                 >
-                  <FaTwitter
-                    style={{ margin: 10, color: 'rgb(175, 197, 218)' }}
-                  />{' '}
+                  <FaTwitter className="footer-icon" />
                 </a>
 
                 <a
@@ -61,24 +54,15 @@ const FooterComponent = () => {
                   href={facebook}
                   style={{ color: 'rgb(40, 55, 64)' }}
                 >
-                  <FaFacebook
-                    style={{ margin: 10, color: 'rgb(175, 197, 218)' }}
-                  />{' '}
+                  <FaFacebook className="footer-icon" />
                 </a>
 
                 <a href={linkedin} style={{ color: 'rgb(40, 55, 64)' }}>
-                  <FaLinkedin
-                    style={{ margin: 10, color: 'rgb(175, 197, 218)' }}
-                  />
+                  <FaLinkedin className="footer-icon" />
                 </a>
               </p>
 
-              <hr
-                style={{
-                  backgroundColor: 'rgb(175, 197, 218)',
-                  textAlign: 'center'
-                }}
-              />
+              <hr />
 
               <form
                 style={{ width: '310px', margin: '0 auto' }}
@@ -115,25 +99,20 @@ const FooterComponent = () => {
             </Columns.Column>
             <Columns.Column>
               <h3>PSG Solutions, LLC</h3>
-              <hr
-                style={{
-                  backgroundColor: 'rgb(175, 197, 218)',
-                  textAlign: 'center'
-                }}
-              />
+              <hr />
               <p>
                 <address>
-                  {' '}
-                  <FaEnvelope />
+                  <FaEnvelope className="footer-icon" />
                   <a href={`mailto:${email}`}> {email}</a>
                 </address>
               </p>
               <p>
-                <FaPhone />
+                <FaPhone className="footer-icon" />
                 <span>
                   <a href={`tel:${phone}`}>{phone}</a>
                 </span>
               </p>
+              <hr />
               {/* <hr />
                   <p style={{ textAlign: "right" }}>
                     <a href="http://discovery.ariba.com/profile/AN01442299482">
@@ -146,12 +125,7 @@ const FooterComponent = () => {
                   </p> */}
             </Columns.Column>
           </Columns>
-          <hr
-            style={{
-              backgroundColor: 'rgb(175, 197, 218)',
-              textAlign: 'center'
-            }}
-          />
+          <hr />
           <Columns className="footerLinksContainer">
             <Link to="/" className="footerLinks">
               Home
@@ -176,19 +150,8 @@ const FooterComponent = () => {
             <Link toTop to="/contact" className="footerLinks">
               Contact
             </Link>
-            <hr
-              style={{
-                backgroundColor: 'rgb(175, 197, 218)',
-                textAlign: 'center'
-              }}
-            />
           </Columns>
-          <hr
-            style={{
-              backgroundColor: 'rgb(175, 197, 218)',
-              textAlign: 'center'
-            }}
-          />
+          <hr />
           <Columns className="footerLinksContainer">
             <p>&copy; 2019 PSG Solutions, LLC</p>
           </Columns>
